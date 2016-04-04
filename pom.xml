@@ -3,10 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Demo</groupId>
 	<artifactId>Demo</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>war</packaging>
-	<name>Struts2Spring4Hibernate4</name>
-	<description>Integration of Struts 2, Spring 4 and Hibernate 4 frameworks</description>
 
 	<dependencies>
 		<dependency>
