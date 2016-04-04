@@ -140,7 +140,6 @@ function getURLParameter(name) {
 							</div>
 							<s:hidden name="book.id"/>
 							<s:hidden name="book.bookImage"/>
-							<s:hidden name="book.createTime"/>
 							<input id="oriBookName" type="hidden" value='<s:property value="book.bookName"/>'/>
 							
 							<!-- Start of hidden inputs -->

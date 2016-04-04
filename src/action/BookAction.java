@@ -106,6 +106,9 @@ public class BookAction extends ActionSupport implements ServletRequestAware{
 	
 	public String doUpdate(){
 		try {
+			Book dbBook = bookService.get(book.getId());
+			dbBook.setBookName(book.getBookName());
+			dbBook.setBookPrice(book.getBookPrice());
 			if (uploadImg != null && StringUtils.isNotBlank(uploadImgFileName)) {
 				String path = request.getServletContext().getRealPath(Util.uploadPath);
 				File folder = new File(path);
@@ -115,9 +118,10 @@ public class BookAction extends ActionSupport implements ServletRequestAware{
 				String fileName = String.valueOf(System.currentTimeMillis());
 				FileUtils.copyFile(uploadImg, new File(folder,fileName));
 				String imgUrl = Util.uploadPath + "\\" + fileName;
-				book.setBookImage(imgUrl);
+				dbBook.setBookImage(imgUrl);
 			}
-			bookService.update(book);
+			
+			bookService.update(dbBook);
 			addActionMessage("н╫зяжие\");
 		} catch (Exception e) {
 			e.printStackTrace();
