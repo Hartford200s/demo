@@ -76,8 +76,8 @@
 			<version>5.1.36</version>
 		</dependency>
 	</dependencies>
-	
-	
+
+
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
@@ -95,6 +95,18 @@
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>src</directory>
+							<targetPath>src</targetPath>
+						</resource>
+					</webResources>
 				</configuration>
 			</plugin>
 		</plugins>
