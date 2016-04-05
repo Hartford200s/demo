@@ -5,13 +5,13 @@ import java.util.Calendar;
 
 public class Book {
 	
+	
 	private long id;
 	private String bookName;
 	private BigDecimal bookPrice;
 	private String bookImage;
 	private Calendar createTime;
 	
-
 	public boolean hasImage(){
 		return bookImage != null && !bookImage.trim().isEmpty() && !bookImage.equalsIgnoreCase("null");
 	}
