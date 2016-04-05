@@ -5,7 +5,6 @@ import java.util.Calendar;
 
 public class Book {
 	
-	
 	private long id;
 	private String bookName;
 	private BigDecimal bookPrice;
