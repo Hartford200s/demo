@@ -11,6 +11,7 @@ public class Book {
 	private String bookImage;
 	private Calendar createTime;
 	
+	
 	public boolean hasImage(){
 		return bookImage != null && !bookImage.trim().isEmpty() && !bookImage.equalsIgnoreCase("null");
 	}
