@@ -68,7 +68,7 @@ public class BookAction extends ActionSupport implements ServletRequestAware{
 				book.setBookImage(imgUrl);
 			}
 			bookService.insert(book);
-			addActionMessage("·s¼W¦¨¥\");
+			addActionMessage("æ–°å¢æˆåŠŸ");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return INPUT;
@@ -122,7 +122,7 @@ public class BookAction extends ActionSupport implements ServletRequestAware{
 			}
 			
 			bookService.update(dbBook);
-			addActionMessage("­×§ï¦¨¥\");
+			addActionMessage("ä¿®æ”¹æˆåŠŸ");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return INPUT;
@@ -133,7 +133,7 @@ public class BookAction extends ActionSupport implements ServletRequestAware{
 	public String doDelete() {
 		try {
 			bookService.delete(id);
-			addActionMessage("§R°£¦¨¥\");
+			addActionMessage("åˆªé™¤æˆåŠŸ");
 		} catch (Exception e) {
 			e.printStackTrace();
 			return INPUT;
